@@ -8,7 +8,6 @@ class App extends React.Component {
      }
 
      componentDidMount() {
-         console.log(this.state)
          fetch('http://api.open-notify.org/astros.json')
          .then(response => response.json())
          .then(data => { 
@@ -18,15 +17,9 @@ class App extends React.Component {
          })
      }
 
-    //  renderAstronauts = (astronauts) => {
-    //     console.log("Space Bois", astronauts)
-    //  }
 
     render() { 
-        console.log(this.state)
-        // {this.state.map(person => {
 
-        // })
         return (
             <div className='container'>
               {this.state.peopleInSpace.map((person, index) => <Space person={person} key={index} />)}  

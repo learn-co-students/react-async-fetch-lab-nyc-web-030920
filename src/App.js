@@ -16,7 +16,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                {this.state.people.map((person, id) => <h1 key={id}>{person.name}</h1>)}
+                {this.state.people.map((person, id) => <p key={id}>{person.name}</p>)}
             </div>
         )
     }
